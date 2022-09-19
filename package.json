@@ -1,0 +1,63 @@
+{
+  "name": "react-json-object",
+  "version": "0.0.1",
+  "description": "React JSON object component (render arbitrary lump of JSON)",
+  "keywords": [
+    "react",
+    "json"
+  ],
+  "author": {
+    "name": "Michael Wright",
+    "email": "mjw@methodanalysis.com"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "url": "https://github.com/mwri/react-json-object",
+  "scripts": {
+    "prepublishOnly": "grunt prepublish",
+    "lint": "eslint src --ext .jsx,.js --max-warnings=0",
+    "format": "eslint --fix src --ext .jsx,.js",
+    "build": "NODE_ENV=production babel src --out-dir dist --copy-files",
+    "test": "jest dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwri/react-json-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mwri/react-json-object/issues"
+  },
+  "homepage": "https://github.com/mwri/react-json-object#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "core-js": "^3.25.0",
+    "crypto-js": "^4.1.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.9.4",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "grunt": "^1.5.3",
+    "grunt-cli": "^1.4.3",
+    "grunt-git": "^1.1.1",
+    "jest": "^29.0.3",
+    "jest-extended": "^3.1.0",
+    "load-grunt-tasks": "^5.1.0"
+  }
+}
