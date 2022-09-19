@@ -1,0 +1,48 @@
+.rjo-json {
+    margin: 1px;
+}
+
+.rjo-json-object {
+    border: solid 3px #60c0c0;
+    border-radius: 0.3em;
+}
+
+.rjo-json-container.rjo-empty-container {
+    border: none;
+    padding: 0.3em;
+}
+
+.rjo-json-object table {
+    border-collapse: collapse;
+}
+
+.rjo-container-key {
+    vertical-align: top;
+    text-align: right;
+    padding: 0.6em;
+}
+
+.rjo-json-array {
+    border: solid 3px #c0c060;
+    border-radius: 0.3em;
+}
+
+.rjo-json-string {
+    border: solid 3px #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 0.3em;
+}
+
+.rjo-json-number {
+    border: solid 3px #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 0.3em;
+}
+
+.rjo-json-scalar {
+    padding: 0.3em;
+}
+
+.rjo-json-unknown {
+    background-color: #ff7070;
+}
