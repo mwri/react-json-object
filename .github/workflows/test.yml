@@ -1,0 +1,27 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        nodejsvsn:
+          - '14'
+          - '16'
+          - '18'
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup nodejs ${{ matrix.nodejsvsn }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.nodejsvsn }}
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
