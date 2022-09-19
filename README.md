@@ -2,11 +2,13 @@
 
 [![test](https://github.com/mwri/react-json-object/actions/workflows/test.yml/badge.svg)](https://github.com/mwri/react-json-object/actions/workflows/test.yml)
 
-Objective: Make a react component for that gnarly lump of JSON.
-Problem: Can't be bothered, it's not super important.
-But: <pre>{JSON.stringify(data, null, 4)}</pre> lowers the tone so much.
+React component which renders that JSON data you kinda need to be there, but
+want to put zero effort into...
 
-Solution: <Json data={data} />
+1. Objective: Make a react component for that gnarly lump of JSON.
+2. Problem: Can't be bothered, it's not super important.
+3. But `<pre>{JSON.stringify(data, null, 4)}</pre>` lowers the tone so much.
+4. Solution `<Json data={data} />`!
 
 You cannot expect it to look amazing obviously, all it can do is recurse your data and
 do the best it can based on it's typing.
