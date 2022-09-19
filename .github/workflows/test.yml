@@ -12,7 +12,6 @@ jobs:
       fail-fast: false
       matrix:
         nodejsvsn:
-          - '14'
           - '16'
           - '18'
 
