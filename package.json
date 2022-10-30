@@ -1,6 +1,6 @@
 {
   "name": "react-json-object",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "React JSON object component (render arbitrary lump of JSON)",
   "keywords": [
     "react",
