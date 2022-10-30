@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
+import ContainerHeader from './ContainerHeader';
 import {
     extendDataPath, jsonDataOptsPropType,
     jsonDataPathPropType, jsonDataPropType,
@@ -23,22 +24,38 @@ function JsonArray({
         );
     }
 
+    const [jsonDisplay, setJsonDisplay] = useState(false);
+
     return (
         <div className="rjo-json-container rjo-json-array">
-            <table>
-                <tbody>
-                    { data.map((subData, i) => (
-                        <tr key={jsonDataToMd5Sum(subData, i.toString())}>
-                            <th className="rjo-container-key rjo-array-index">
-                                {i}
-                            </th>
-                            <td className="rjo-container-value rjo-array-value">
-                                <Json data={subData} path={extendDataPath(path, i)} component={component} opts={opts} />
-                            </td>
-                        </tr>
-                    )) }
-                </tbody>
-            </table>
+            {opts.header && (
+                <ContainerHeader
+                    jsonOnClick={() => setJsonDisplay(!jsonDisplay)}
+                    jsonDisplay={jsonDisplay}
+                />
+            )}
+
+            {jsonDisplay ? (<pre>{JSON.stringify(data, null, 4)}</pre>) : (
+                <table>
+                    <tbody>
+                        { data.map((subData, i) => (
+                            <tr key={jsonDataToMd5Sum(subData, i.toString())}>
+                                <th className="rjo-container-key rjo-array-index">
+                                    {i}
+                                </th>
+                                <td className="rjo-container-value rjo-array-value">
+                                    <Json
+                                        data={subData}
+                                        path={extendDataPath(path, i)}
+                                        component={component}
+                                        opts={opts}
+                                    />
+                                </td>
+                            </tr>
+                        )) }
+                    </tbody>
+                </table>
+            )}
         </div>
     );
 }

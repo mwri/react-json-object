@@ -23,6 +23,10 @@ function MyComponent ({ data }) {
 }
 ```
 
+A title bar of sorts can be added to objects and arrays (containers) with a "json" button
+allowing the display to be toggled to JSON and back again by setting the "header" option
+like `<Json data={data} opts={{ headers: true }}/>`.
+
 ## What to expect
 
 The out of the box result, with the default CSS, is OK, if obviously highly generic, and

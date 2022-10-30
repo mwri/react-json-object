@@ -5,6 +5,7 @@
 .rjo-json-object {
     border: solid 3px #60c0c0;
     border-radius: 0.3em;
+    overflow: hidden;
 }
 
 .rjo-json-container.rjo-empty-container {
@@ -12,7 +13,7 @@
     padding: 0.3em;
 }
 
-.rjo-json-object table {
+.rjo-json-object > table {
     border-collapse: collapse;
 }
 
@@ -25,6 +26,7 @@
 .rjo-json-array {
     border: solid 3px #c0c060;
     border-radius: 0.3em;
+    overflow: hidden;
 }
 
 .rjo-json-string {
@@ -45,4 +47,34 @@
 
 .rjo-json-unknown {
     background-color: #ff7070;
+}
+
+.rjo-control {
+    border: dotted 1px #000000;
+    border-radius: 0.8em;
+    font-size: 20%;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-right: 0.3em;
+    padding: 0px 2px 1px 2px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.rjo-title-bar > * {
+    float: right;
+}
+
+.rjo-json-container > .rjo-title-bar {
+    height: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.rjo-json-object > .rjo-title-bar {
+    background-color: #c0e0e0;
+    border-bottom: 1px solid #60c0c0;
+}
+
+.rjo-json-array > .rjo-title-bar {
+    background-color: #e0e0c0;
+    border-bottom: 1px solid #c0c060;
 }
